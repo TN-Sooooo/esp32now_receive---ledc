@@ -39,10 +39,6 @@ const int Motor_IN1 = 0;
 
 const int Motor_IN2 = 3;
 
-const int Motor_IN3 = 0;
-
-const int Motor_IN4 = 3;
-
 extern const int Motor_channel_PWMA = 2;
 // PWM的通道，共16个(0-15)，分为高低速两组，
 // 高速通道(0-7): 80MHz时钟，低速通道(8-15): 1MHz时钟
@@ -61,10 +57,6 @@ void Motor_Init(void)
   pinMode(Motor_IN1, OUTPUT);
 
   pinMode(Motor_IN2, OUTPUT);
-
-  pinMode(Motor_IN3, OUTPUT);
-
-  pinMode(Motor_IN4, OUTPUT);
 
   digitalWrite(Motor_IN1, LOW);
 
