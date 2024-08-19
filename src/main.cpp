@@ -143,8 +143,8 @@ void loop()
   else if (ADC_DATA < 110)
   {
     Motor_PWM_NUM = map(ADC_DATA, 0, 114, 255, 0);
-     Serial.print("下半  :   ");
-     Serial.println(Motor_PWM_NUM);
+    Serial.print("下半  :   ");
+    Serial.println(Motor_PWM_NUM);
     digitalWrite(Motor_IN1, HIGH);
     digitalWrite(Motor_IN2, LOW);
     ledcWrite(Motor_channel_PWMA, Motor_PWM_NUM);
@@ -154,8 +154,8 @@ void loop()
 
     digitalWrite(Motor_IN1, LOW);
     digitalWrite(Motor_IN2, LOW);
-     digitalWrite(Motor_PWM_PinA, LOW);
-     Serial.print("ADC_DATA  :   ");
-     Serial.println(ADC_DATA);
+    digitalWrite(Motor_PWM_PinA, LOW);
+    Serial.print("ADC_DATA  :   ");
+    Serial.println(ADC_DATA);
   }
 }
